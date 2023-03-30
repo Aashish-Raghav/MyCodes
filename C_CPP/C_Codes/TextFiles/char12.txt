@@ -1,0 +1,4 @@
+read(ch);       {get the first character}
+while ch = ' ' do       {as long as ch is a blank}
+read(ch);       {get another character}
+writeln('The first non - blank is ',ch);

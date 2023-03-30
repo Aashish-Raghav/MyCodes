@@ -1,0 +1,5 @@
+Burger 100 10
+Pizza 350 5
+Rolls 120 15
+Chowmein 40 20
+END

@@ -1,0 +1,7 @@
+1.copy_paste;
+
+2.percent_inc_dec_price;
+
+3.tax
+
+4. customer_pay_in_file;

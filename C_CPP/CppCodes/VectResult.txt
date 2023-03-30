@@ -1,0 +1,27 @@
+Target Distance: 100, Step Size 50
+0: (x,y) = (37.7355,32.803)
+1: (x,y) = (23.1169,80.6182)
+2: (x,y) = (-18.335,52.6585)
+3: (x,y) = (-56.6372,20.5192)
+4: (x,y) = (-55.7646,70.5115)
+5: (x,y) = (-77.6831,25.5718)
+6: (x,y) = (-40.5259,-7.88468)
+7: (x,y) = (-88.0787,-23.3355)
+8: (x,y) = (-48.6782,-54.1186)
+9: (x,y) = (-0.615106,-67.9005)
+10: (x,y) = (28.0637,-108.858)
+After 11 steps, the subject has the following location:
+(x,y) = (28.0637,-108.858)
+or
+(m,a) = (112.417,-75.5439)
+Average outward distance per step = 10.2198
+Target Distance: 100, Step Size 75
+0: (x,y) = (31.6964,67.9731)
+1: (x,y) = (-4.66435,2.37661)
+2: (x,y) = (-8.58955,-72.5206)
+3: (x,y) = (-44.9503,-138.117)
+After 4 steps, the subject has the following location:
+(x,y) = (-44.9503,-138.117)
+or
+(m,a) = (145.248,-108.028)
+Average outward distance per step = 36.3119

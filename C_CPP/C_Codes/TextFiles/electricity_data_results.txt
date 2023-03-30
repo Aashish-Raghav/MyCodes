@@ -1,0 +1,10 @@
+Name               Previous_unit     Current_unit      Net_unit       Charge
+
+Aashish Raghav           1220.00        1450.00         230.00       4625.00 
+Anurag Raghav            3225.00        3658.00         433.00       8685.00 
+Chetan Teotia             740.00        1259.00         519.00      10405.00 
+Harsh Jadon              5880.00        5890.00          10.00        225.00 
+
+ Numbers of Customers : 4
+Total due to electricity company : 23940.00
+Chetan Teotia has highest electricity bill : 10405.00

@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "array": "cpp",
+        "sstream": "cpp",
+        "tuple": "cpp",
+        "iosfwd": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp",
+        "minimumscoretriangulation": "cpp"
+    }
+}

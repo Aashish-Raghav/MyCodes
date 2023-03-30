@@ -1,0 +1,10 @@
+Name                Hours  Rate  Regular  Overtime   Net
+
+Aashish Raghav      50.0   12.00  480.00   180.00   660.00 
+Anurag Raghav       40.0   15.00  600.00     0.00   600.00 
+Chetan Teotia       48.0   20.00  800.00   240.00  1040.00 
+Harsh Jadon         100.0  18.00  720.00   1620.00  2340.00 
+
+Number Of Employees : 4 
+ Total wage bill : $4640.00
+Harsh Jadon earned the most pay of $2340.00

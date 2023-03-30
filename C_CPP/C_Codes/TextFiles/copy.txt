@@ -1,0 +1,5 @@
+hello world
+
+my first c code in file handling.
+
+END

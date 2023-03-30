@@ -1,0 +1,8 @@
+Hours_Worked   Part_Cost   Charge
+
+       2.00      500.00     725.0
+       0.00        0.00     195.0
+       5.00       10.00     460.0
+       1.00       10.00     195.0
+
+Total Charge for all jobs : 1120.00

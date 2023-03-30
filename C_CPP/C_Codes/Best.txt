@@ -1,0 +1,11 @@
+1.prime_pairs.c
+
+2.pattern2.c
+
+3. letter_count_pssg.c
+
+4. pallidrome.c
+
+5. geographyQuiz.c
+
+6. address2student.c   //fflush fxn;

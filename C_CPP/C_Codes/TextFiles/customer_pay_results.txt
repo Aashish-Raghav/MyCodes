@@ -1,0 +1,9 @@
+item        Price   Discount   Pay_Amount
+
+Burger     100.00      10.00      90.00 
+Pizza      350.00       5.00     332.50 
+Rolls      120.00      15.00     102.00 
+Chowmein   40.00      20.00      32.00 
+
+ Numbers of Items : 4
+ Net Amount to be Paid : 556.50

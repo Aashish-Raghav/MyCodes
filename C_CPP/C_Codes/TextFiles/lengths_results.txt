@@ -1,0 +1,7 @@
+Length 1                         Length 2                             Sum
+
+2 yards 2 feets 4 inches 		2 yards 2 feets 4 inches 			5 yards 1 feets 8 inches 
+0 yards 0 feets 0 inches 		3 yards 2 feets 8 inches 			3 yards 2 feets 8 inches 
+6 yards 0 feets 6 inches 		0 yards 0 feets 0 inches 			6 yards 0 feets 6 inches 
+1 yards 2 feets 6 inches 		2 yards 1 feets 6 inches 			4 yards 1 feets 0 inches 
+3 yards 1 feets 0 inches 		6 yards 1 feets 2 inches 			9 yards 2 feets 2 inches 
