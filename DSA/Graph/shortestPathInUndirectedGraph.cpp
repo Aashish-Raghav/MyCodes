@@ -6,6 +6,8 @@
 #include <vector>
 
 using namespace std;
+//s is starting point
+//t is destination
 vector<int> shortestPath( vector<pair<int,int>> edges , int n , int m, int s , int t){
 	unordered_map<int,list<int>> adjList;
 	for (auto i : edges){
