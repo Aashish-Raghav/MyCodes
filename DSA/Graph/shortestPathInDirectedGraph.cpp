@@ -20,15 +20,31 @@ public:
     }
 
     void dfs(unordered_map<int,bool> &visited,stack<int> &s,int node){
-    visited[node] = true;
+        visited[node] = true;
 
-    for (auto i : adjList[node]){
-        if (!visited[i.first]){
-            dfs(visited,s,i.first);
+        for (auto i : adjList[node]){
+            if (!visited[i.first]){
+                dfs(visited,s,i.first);
+            }
+        }
+        s.push(node);
+    }
+
+    void shortestPath(int src,stack<int> &s,vector<int> &dist){
+        dist[src] = 0;
+
+        while (!s.empty()){
+            int top = s.top();
+            s.pop();
+            if (dist[top] != INT_MAX){
+                for (auto i : adjList[top]){
+                    if (dist[top] + i.second < dist[i.first]){
+                        dist[i.first] = dist[top] + i.second;
+                    }
+                }
+            }
         }
     }
-    s.push(node);
-}
 };
 
 int main(){
@@ -55,9 +71,18 @@ int main(){
             g.dfs(visited,s,i);
     }
 
-    // for (auto i : s)
-    //     cout << i << " ";
-    // cout << endl;
+    vector<int> dist(n,INT_MAX);
+
+    g.shortestPath(1,s,dist);
+
+    for (auto i : dist){
+        if (i != INT_MAX)
+            cout << i << " ";
+        else
+            cout << "INF" << " ";
+    }
+    cout << endl;
+    
     
     return 0;
 }
