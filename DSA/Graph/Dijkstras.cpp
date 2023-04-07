@@ -13,18 +13,24 @@ vector<int> dijkstra(vector<vector<int>> &vec, int vertices, int edges, int sour
         adjList[v].push_back({u,weight});
     }
 
-
+    //creation of distance array with infinite value initially
+    vector<int> dist(vertices,INT_MAX);
+    //creation of set basis(distance,node)
     set<pair<int,int>> s;
     s.insert({0,source});
-    vector<int> dist(vertices,INT_MAX);
+
+    //initialize set with distance adn source node
     dist[source] = 0;
 
     while (!s.empty()){
+        //fetch top record
         pair<int,int> top = *(s.begin());
         int nodeDist = top.first;
         int topNode = top.second;
+        //remove top from set
         s.erase(top);
-
+         
+        //traverse all neighbours
         for (auto i : adjList[topNode]){
             if (dist[i.first] > nodeDist + i.second){
                 pair<int,int> record = {dist[i.first],topNode};
