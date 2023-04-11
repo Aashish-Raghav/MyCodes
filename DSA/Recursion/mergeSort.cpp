@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 void merge1(int* arr,int start,int mid,int end)
 {
