@@ -15,7 +15,6 @@ int main(){
         adj[u][v] = 1;
         adj[v][u] = 1;
     }
-
     for (int i = 0;i <=  n;i++){
         for (int j = 0;j <= n;j++){
             cout << adj[i][j] << " ";
