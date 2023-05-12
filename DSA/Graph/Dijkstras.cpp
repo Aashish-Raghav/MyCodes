@@ -33,12 +33,17 @@ vector<int> dijkstra(vector<vector<int>> &vec, int vertices, int edges, int sour
         //traverse all neighbours
         for (auto i : adjList[topNode]){
             if (dist[i.first] > nodeDist + i.second){
-                pair<int,int> record = {dist[i.first],topNode};
-                
+
+                //why this portion
+                //_________________________________________
+                pair<int,int> record = {dist[i.first],topNode};               
                 //if record present erase it;
                 if (s.find(record) != s.end()){
                     s.erase(record);
                 }
+                //_________________________________________
+
+
                 dist[i.first] = nodeDist + i.second;
                 // cout << ans[i.first] << " ";
                 s.insert({dist[i.first],i.first});
