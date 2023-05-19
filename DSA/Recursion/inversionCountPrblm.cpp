@@ -42,7 +42,6 @@ long long merge(long long arr[],long long start,long long mid,long long end
             long long mid = start + (end - start)/2;
             inver_count += mergeSort(arr,start,mid,temp);
             inver_count += mergeSort(arr,mid+1,end,temp);
-            
             inver_count += merge(arr,start,mid+1,end,temp);
         }
         
