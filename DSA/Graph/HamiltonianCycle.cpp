@@ -15,6 +15,7 @@ bool isSafe(int path[],bool graph[V][V],int pos,int i){
     if (graph[path[pos-1]][i] == 0)
         return false;
     
+    //already visited;
     for (int j = 0;j < pos;j++){
         if (path[j] == i) 
             return false;

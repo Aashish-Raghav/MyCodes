@@ -15,6 +15,7 @@ void dfs(int node,int parent,vector<int> &disc,vector<int> &low
             dfs(nbr,node,disc,low,timer,adjList,vis,result);
             low[node] = min(low[node],low[nbr]);
             //check if it is bridge;
+            //this condition ensures that only single path is there from nbr to node;
             if (low[nbr] > disc[node]){
                 vector<int> ans;
                 ans.push_back(node);

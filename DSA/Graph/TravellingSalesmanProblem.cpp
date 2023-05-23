@@ -11,6 +11,7 @@ int dist[n + 1][n + 1] = {
     { 0, 20, 25, 30, 0 },
 };
 
+//atmost 64 places can be tracked...
 int visited_all = (1 << (n+1)) - 1;
 
 //recursion
