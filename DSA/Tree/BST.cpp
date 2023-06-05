@@ -37,6 +37,9 @@ public:
 
     friend int solveKthSmallest(Node* root,int k,int &i);
     friend int kthSmallest(Node* root, int k);
+    friend void solvekthLargest1(Node* root,int k,int &i,int &ans);
+    friend int solvekthLargest2(Node* root,int k,int &i);
+    friend int kthLargest(Node *root, int k);
 
     friend Node* inorderToBST(vector<int> v,int s,int e);
     friend Node* balancedBst(Node* root);
@@ -306,6 +309,39 @@ int solveKthSmallest(Node* root,int k,int &i){
 int kthSmallest(Node* root, int k) {
     int i = 0;
     return solveKthSmallest(root,k,i);
+}
+
+int solvekthLargest2(Node* root,int k,int &i){
+    if (root == NULL)
+        return -1;
+    
+    int right = solvekthLargest2(root->right,k,i);
+    if (right != -1)
+        return right;
+    i++;
+    if (i == k){
+        return root->data;
+    }
+    return solvekthLargest2(root->left,k,i);
+}
+
+void solvekthLargest1(Node* root,int k,int &i,int &ans){
+    if (root == NULL || i >= k)
+        return;
+    
+    solvekthLargest1(root->right,k,i,ans);
+    i++;
+    if (i == k){
+        ans = root->data;
+        return;
+    }
+    solvekthLargest1(root->left,k,i,ans);
+}
+
+int kthLargest(Node *root, int k)
+{
+    int i = 0;
+    return solvekthLargest2(root,k,i);
 }
 
 Node* inorderToBST(vector<int> v,int s,int e){

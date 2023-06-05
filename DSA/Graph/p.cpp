@@ -1,60 +1,58 @@
+// C++ program to find maximum sum from a subset of
+// Nodes of binary tree
 #include <bits/stdc++.h>
 using namespace std;
 
-const int maxN = 1e5;
+/* A binary tree Node structure */
+struct Node {
+	int data;
+	struct Node *left, *right;
+};
 
-int indegree[maxN];
-int job[maxN];
-unordered_map<int,list<int>> adjList;
-
-void addEdge(int u,int v){
-    adjList[u].push_back(v);
-    indegree[v]++;
+/* Utility function to create a new Binary Tree Node */
+struct Node* newNode(int data)
+{
+	struct Node* temp = new struct Node;
+	temp->data = data;
+	temp->left = temp->right = NULL;
+	return temp;
 }
 
-void printOrder(int n,int m){
-    queue<int> q;
-    for (int i = 1;i <= n;i++){
-        if (indegree[i] == 0){
-            q.push(i);
-            job[i] = 1;
-        }
-    }
+pair<int,int> solve(Node* root){
+    if (root == NULL)
+        return {0,0};
+    pair<int,int> left = solve(root->left);
+    pair<int,int> right = solve(root->right);
 
-    while (!q.empty()){
-        int front = q.front();  
-        q.pop();
-        for (auto i : adjList[front]){
-            indegree[i]--;
-            if (indegree[i] == 0){
-                q.push(i);
-                job[i] = job[front]+1;
-            }
-        }
-    }
-
-    for(int i = 1;i <= n;i++){
-        cout << job[i] << " ";
-    }
-    cout << endl;
+    pair<int,int> ans;
+    //include curr Node;
+    ans.first = root->data + left.second + right.second;
+    //exclude curr Node
+    ans.second = max(left.first,left.second) + max(right.first,right.second);
+    cout << ans.first << " " << ans.second << endl;
+    return ans;
+    
 }
 
-int main(){
-    //nodes and edges;
-    int n = 10,m = 13;
-    addEdge(1, 3);
-    addEdge(1, 4);
-    addEdge(1, 5);
-    addEdge(2, 3);
-    addEdge(2, 8);
-    addEdge(2, 9);
-    addEdge(3, 6);
-    addEdge(4, 6);
-    addEdge(4, 8);
-    addEdge(5, 8);
-    addEdge(6, 7);
-    addEdge(7, 8);
-    addEdge(8, 10);
+int maxSum(Node* root){
+    pair<int,int> p = solve(root);
+    return max(p.first,p.second);
+}
 
-    printOrder(n,m);
+// Driver code
+int main()
+{
+	Node* root = newNode(1);
+    root->left = newNode(3);
+    root->left->left = newNode(2);
+    root->left->right = newNode(1);
+    root->left->right->left = newNode(1);
+    root->right = newNode(2);
+    root->right->left = newNode(4);
+    root->right->left->left = newNode(1);
+    root->right->left->right = newNode(2);
+    root->right->right = newNode(5);
+    root->right->right->right = newNode(6);
+	cout << maxSum(root) << endl;
+	return 0;
 }

@@ -109,20 +109,21 @@ int main(){
     h.insert(54);
     h.print();
     h.deleteFromHeap();
-    int arr[6] = {-1,54,53,55,52,50};
-    for (int i = 3;i > 0;i--){
+    h.print();
+    int arr[] = { -1,10, 30, 5, 63, 22, 12, 56, 33 };
+    for (int i = 8;i > 0;i--){
         maxHeapify(arr,6,i);
     }
 
-    for (int i = 0;i < 6;i++)
+    for (int i = 0;i < 9;i++)
         cout << arr[i] << " ";
     cout << endl;
 
-    for (int i = 3;i > 0;i--){
+    for (int i = 4;i > 0;i--){
         minHeapify(arr,6,i);
     }
   
-    for (int i = 0;i < 6;i++)
+    for (int i = 0;i < 9;i++)
         cout << arr[i] << " ";
     cout << endl;
 
