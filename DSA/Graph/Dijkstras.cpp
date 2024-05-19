@@ -33,7 +33,6 @@ vector<int> dijkstra(vector<vector<int>> &vec, int vertices, int edges, int sour
         //traverse all neighbours
         for (auto i : adjList[topNode]){
             if (dist[i.first] > nodeDist + i.second){
-
                 //why this portion    // because suppose we have 15,8 as entry already and added new entry of 14,8 so must delete 15,8
                 //_________________________________________
                 pair<int,int> record = {dist[i.first],topNode};               

@@ -1,4 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <map>
+#include <unordered_map>
+#include <algorithm>
+
 using namespace std;
 bool cmp(vector<int> &a, vector<int> &b){
   return a[2] < b[2];
@@ -12,7 +18,7 @@ void makeSet(vector<int> &rank,vector<int> &parent,int n){
     }
 }
 
-//finding parent and path compression
+//finding parent and path compres sion
 int findParent(vector<int> &parent,int node){
     if (parent[node] == node){
       return node;

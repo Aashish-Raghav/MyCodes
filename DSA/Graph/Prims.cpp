@@ -1,5 +1,19 @@
 
-#include <bits/stdc++.h> 
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <map>
+#include <unordered_map>
+#include <algorithm>
+#include <iomanip>
+#include <cmath>
+#include <stack>
+#include <set>
+#include <string>
+#include <cctype>
+#include <numeric>
+#include <string>
+#include <climits>
 using namespace std;
 vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m, vector<pair<pair<int, int>, int>> &g)
 {

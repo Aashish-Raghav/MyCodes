@@ -5,7 +5,8 @@
 using namespace std;
 
 void print(vector<int> v)
-{
+{   
+    cout << v.size() << endl;
     for (int i = 0;i < v.size();i++)
     {
         cout << v[i] << "";
@@ -14,11 +15,9 @@ void print(vector<int> v)
 }
 int main()
 {
-    int t;
-    cin >> t;
+    int t = 1;
     while (t--){
-        int n;
-        cin >> n;
+        int n = 100;
         vector<int> v;
         v.push_back(1);
         int ans = 1;
